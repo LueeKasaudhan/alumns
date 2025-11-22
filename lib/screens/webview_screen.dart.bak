@@ -1,0 +1,41 @@
+// lib/screens/webview_screen.dart
+
+import 'package:flutter/material.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+class WebviewScreen extends StatefulWidget {
+  @override
+  _WebviewScreenState createState() => _WebviewScreenState();
+}
+
+class _WebviewScreenState extends State<WebviewScreen> {
+  late final WebViewController controller;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onPageFinished: (_) {
+            setState(() => isLoading = false);
+          },
+        ),
+      )
+      ..loadRequest(Uri.parse("https://alumns.com"));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: [
+          WebViewWidget(controller: controller),
+          if (isLoading) Center(child: CircularProgressIndicator()),
+        ],
+      ),
+    );
+  }
+}
