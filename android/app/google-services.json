@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "991683120258",
+    "project_id": "alumns-app",
+    "storage_bucket": "alumns-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991683120258:android:e0a4c8f0112140735bf89b",
+        "android_client_info": {
+          "package_name": "com.alumns.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991683120258-153uj8mn04pglp56mg50uuqqr3lsvve8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alumns.app",
+            "certificate_hash": "c8cf2b48ca54ba5bf48c7d87aa1148947cf70925"
+          }
+        },
+        {
+          "client_id": "991683120258-1jb6h18u800lmdq38tnmm4m8s9tvklcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjwPbOqfCqpOwEZP7-mDppFq0w6jsj4Ss"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991683120258-1jb6h18u800lmdq38tnmm4m8s9tvklcn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
