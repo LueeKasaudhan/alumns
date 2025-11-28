@@ -1,4 +1,4 @@
-// lib/services/connectivity_service.dart
+
 
 import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -13,7 +13,7 @@ class ConnectivityService {
       }
 
       // Then try pinging a reliable server
-      final result = await InternetAddress.lookup('example.com');
+      final result = await InternetAddress.lookup('alumns.com');
       if (result.isNotEmpty && result[0].rawAddress.isNotEmpty) {
         return true;
       } else {
