@@ -1,4 +1,4 @@
-// lib/screens/splash_screen.dart
+
 
 import 'package:flutter/material.dart';
 import '../services/connectivity_service.dart';
@@ -25,13 +25,13 @@ class _SplashScreenState extends State<SplashScreen>
       vsync: this,
     );
 
-    // Fade animation: 0 → 1
+    // Fade animation: 0 → 1 jaa raha hai
     _fadeAnimation = Tween<double>(
       begin: 0,
       end: 1,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
 
-    // Scale animation: 0.8 → 1.0 (smooth zoom)
+    // Scale animation: 0.8 → 1.0 (smooth zoom ke liye)
     _scaleAnimation = Tween<double>(
       begin: 0.8,
       end: 1.0,
@@ -68,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white, // clean modern background
+      backgroundColor: Colors.white,
       body: Center(
         child: FadeTransition(
           opacity: _fadeAnimation,

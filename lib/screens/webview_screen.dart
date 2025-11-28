@@ -1,4 +1,4 @@
-// lib/screens/webview_screen.dart
+
 
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
@@ -49,7 +49,7 @@ class _WebviewScreenState extends State<WebviewScreen>
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
-      // user returned from browser → reload WebView
+      // user returned from browser to reload the WebView
       controller.reload();
     }
   }
