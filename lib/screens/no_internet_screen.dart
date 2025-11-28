@@ -1,4 +1,4 @@
-// lib/screens/no_internet_screen.dart
+
 
 import 'package:flutter/material.dart';
 import '../services/connectivity_service.dart';
