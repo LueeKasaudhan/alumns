@@ -3,10 +3,15 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
+import 'package:flutter/services.dart';
 
 class WebviewScreen extends StatefulWidget {
   @override
   _WebviewScreenState createState() => _WebviewScreenState();
+}
+
+void setSystemUIMode() {
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 }
 
 class _WebviewScreenState extends State<WebviewScreen>
@@ -17,6 +22,7 @@ class _WebviewScreenState extends State<WebviewScreen>
   @override
   void initState() {
     super.initState();
+    setSystemUIMode();
     WidgetsBinding.instance.addObserver(this);
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
